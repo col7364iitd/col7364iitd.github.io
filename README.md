@@ -5,7 +5,7 @@
 
 **Course Slot:** AB (Mon/Thu, 3:30pm-5:00pm)
 
-**Lecture Location:** LHC421 
+**Lecture Location:** LH 313.1
 
 # About the Course 
 Information retrieval -aka “search”- plays a central role in our modern digital lives. In this course we cover the fundamental concepts of information retrieval as well as some of the recent advances in the field such as the use of knowledge graphs for retrieval, neural methods for retrieval tasks, issues of fairness and fake news, and the use of succinct data-structures in building efficient search systems.
