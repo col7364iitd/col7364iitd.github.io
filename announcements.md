@@ -7,6 +7,8 @@ description: A feed containing all of the class announcements.
 
 # Announcements
 
-**14 January 2025:** The seat allocation for students registered for the course is finalized and is shared [here](https://csciitd-my.sharepoint.com/:x:/g/personal/mcs252094_iitd_ac_in/IQArYLO2V-gmQ5xpG4zccGmLAWHBi5W6eFBUwb2-RM28LKw) 
+[`23 Jul 2026`] There are no classes on 27th July, 30th July, and 3rd August
 
-**15 November 2025:** Course webpage is up!
+[`23 Jul 2026`] First lecture will be held on 23th July 2026 at 3:30pm in LHC 421. Please attend even if you are not able to register.
+
+
