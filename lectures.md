@@ -10,6 +10,10 @@ description: The weekly event schedule.
 <!--iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyvXLfZws2U5pKoXoKAH5apWmNX1ab-aD5PW1cpRgX3MUQ52zCPAeurXtdGfA5nKZmjSGIA0di7q8r/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSczFyCmp6guNbmXHgm_DD2gdC0hkAEtfweRANJWeRqORIYPv4hBdgXYxaJAYwsiszgJ-htX1pRivDi/pubhtml?gid=1299710416&amp;single=true&amp;widget=true&amp;headers=false" style="border:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>-->
 
+1. `23 Jul 2026` : Organizational
+2. `06 Aug 2026` : Documents
+3. `10 Aug 2026` : Retrieval
+4. `13 Aug 2026` : Evaluation
 
 {% for schedule in site.schedules %}
 {{ schedule }}
