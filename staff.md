@@ -8,7 +8,7 @@ description: A listing of all the course staff members.
 
 ### Instructors
 
-- Srikanta Bedathur (https://www.cse.iitd.ac.in/~srikanta/)
+- [Srikanta Bedathur](https://www.cse.iitd.ac.in/~srikanta/)
 
 ### Teaching Assistants
 
