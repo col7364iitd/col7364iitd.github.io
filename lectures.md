@@ -12,8 +12,9 @@ description: The weekly event schedule.
 
 1. `23 Jul 2026` : [Organizational](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-lec1.pdf)
 2. `06 Aug 2026` : [Documents](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-lec2.pdf)
-3. `10 Aug 2026` : Retrieval
-4. `13 Aug 2026` : Evaluation
+3. `10 Aug 2026` : [Retrieval](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-retrieval-1.pdf)
+4. `13 Aug 2026` : [Retrieval](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-retrieval-2.pdf)
+5. `17 Aug 2026` : Evaluation
 
 {% for schedule in site.schedules %}
 {{ schedule }}
