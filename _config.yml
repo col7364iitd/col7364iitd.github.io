@@ -58,6 +58,11 @@ defaults:
       type: logistics
     values:
       layout: logistics      
+	- scope:
+			path: ''
+			type: reading
+		values:
+			layout: reading
 
 compress_html:
   clippings: all
