@@ -16,6 +16,7 @@ description: The weekly event schedule.
 4. `13 Aug 2026` : [Retrieval](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-retrieval-2.pdf)
 5. `17 Aug 2026` : [Evaluation](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-vsm-evaluation-1.pdf)
 6. `20 Aug 2026` : [Evaluation](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-evaluation-2.pdf)
+6. `22 Aug 2026` : [Probabilistic Retrieval](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-probabilistic-1.pdf)
 
 {% for schedule in site.schedules %}
 {{ schedule }}
