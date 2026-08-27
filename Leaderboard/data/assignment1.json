@@ -1,0 +1,12 @@
+{
+  "assignment": "Assignment 1: Sparse Retrieval Arena",
+  "lastUpdated": "August 12, 2026 — 10:00 AM IST",
+  "entries": [
+    { "rollNo": "2026XXXX", "ndcg": 0.6124, "map": 0.1432, "efficiency": 0.08 },
+    { "rollNo": "2026YYYY", "ndcg": 0.5981, "map": 0.1510, "efficiency": 0.04 },
+    { "rollNo": "2026ZZZZ", "ndcg": 0.5753, "map": 0.1622, "efficiency": 0.02 },
+    { "rollNo": "2026AAAA", "ndcg": 0.5602, "map": 0.1388, "efficiency": 0.01 },
+    { "rollNo": "2026BBBB", "ndcg": 0.5490, "map": 0.1290, "efficiency": -0.02 },
+    { "rollNo": "2026CCCC", "ndcg": 0.5310, "map": 0.1350, "efficiency": 0.00 }
+  ]
+}

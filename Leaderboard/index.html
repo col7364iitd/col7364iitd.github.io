@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Leaderboard</title>
+<style>
+  /* ============================================================
+     This file contains ONLY layout/design. Leaderboard data lives
+     in /data/*.json and is loaded by leaderboard.js. Do not add
+     student data here.
+     ============================================================ */
+
+  :root{
+    --bg: #0e1116;
+    --bg-panel: #151a21;
+    --bg-row: #12161d;
+    --bg-row-alt: #10141a;
+    --line: #262d38;
+    --line-soft: #1c222b;
+    --ink: #e7ebf1;
+    --ink-dim: #97a1b0;
+    --ink-faint: #5f6a7a;
+    --accent: #ffb454;      /* query-highlight amber */
+    --gold: #ffd166;
+    --silver: #c9d3e0;
+    --bronze: #e0a072;
+    --mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --sans: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html, body{
+    margin:0;
+    padding:0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body{
+    background-image:
+      radial-gradient(circle at 15% 0%, rgba(255,180,84,0.05), transparent 40%),
+      radial-gradient(circle at 85% 10%, rgba(255,180,84,0.03), transparent 35%);
+  }
+
+  .wrap{
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+
+  /* ---------- header ---------- */
+
+  .eyebrow{
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .eyebrow::before{
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: var(--accent);
+    border-radius: 1px;
+    box-shadow: 0 0 8px rgba(255,180,84,0.7);
+  }
+
+  h1{
+    font-size: clamp(28px, 4.4vw, 40px);
+    line-height: 1.15;
+    margin: 0 0 10px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  h1 #assignment-title{ color: var(--accent); }
+
+  .subtitle{
+    color: var(--ink-dim);
+    font-size: 15px;
+    margin: 0 0 24px;
+    max-width: 60ch;
+  }
+
+  /* ---------- controls: assignment selector + actions ---------- */
+
+  .controls-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .selector-group{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .selector-group label{
+    font-family: var(--mono);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-faint);
+  }
+
+  select#assignment-select{
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2397a1b0' stroke-width='1.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 30px;
+  }
+  select#assignment-select:focus{ outline: 1px solid var(--accent); }
+
+  .action-group{
+    display: flex;
+    gap: 8px;
+  }
+
+  .btn{
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 7px;
+    border: 1px solid var(--line);
+    background: var(--bg-panel);
+    color: var(--ink);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: filter 0.15s ease, border-color 0.15s ease;
+  }
+  .btn:hover:not(:disabled){ filter: brightness(1.15); border-color: #333d4c; }
+  .btn:disabled{ opacity: 0.45; cursor: not-allowed; }
+  .btn svg{ flex-shrink: 0; }
+
+  .btn-primary{
+    background: linear-gradient(160deg, #ffc978, var(--accent));
+    color: #2a1b00;
+    border: none;
+  }
+  .btn-primary:hover:not(:disabled){ filter: brightness(1.06); }
+
+  /* ---------- status (loading / error) ---------- */
+
+  #status-message{
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-dim);
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+  }
+  #status-message.status-error{
+    color: #ff9a8d;
+    border-color: rgba(255,133,119,0.35);
+  }
+
+  .meta-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 34px;
+  }
+
+  .meta-chip{
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--ink-dim);
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 7px 12px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .meta-chip .dot{
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #5ee6a0;
+    box-shadow: 0 0 6px rgba(94,230,160,0.8);
+  }
+  .meta-chip b{ color: var(--ink); font-weight: 600; }
+
+  /* ---------- table panel ---------- */
+
+  .panel{
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .panel-head{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 18px 20px 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  .panel-head h2{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-dim);
+    margin: 0;
+    font-weight: 600;
+  }
+  .panel-head .count{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-faint);
+  }
+
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+  }
+
+  thead th{
+    text-align: right;
+    font-size: 11.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 600;
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  thead th:first-child,
+  thead th:nth-child(2){ text-align: left; }
+
+  tbody td{
+    padding: 14px 18px;
+    text-align: right;
+    font-family: var(--mono);
+    font-size: 14px;
+    border-bottom: 1px solid var(--line-soft);
+    white-space: nowrap;
+  }
+  tbody td:first-child,
+  tbody td:nth-child(2){ text-align: left; }
+
+  tbody tr:nth-child(odd){ background: var(--bg-row); }
+  tbody tr:nth-child(even){ background: var(--bg-row-alt); }
+  tbody tr:last-child td{ border-bottom: none; }
+  tbody tr:hover{ background: #1a2027; }
+
+  .rank-cell{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--ink-dim);
+  }
+
+  .medal{
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .medal.gold{ background: linear-gradient(160deg, #ffe9b0, #d9a441); box-shadow: 0 0 0 1px rgba(255,209,102,0.4), 0 0 14px rgba(255,209,102,0.35); }
+  .medal.silver{ background: linear-gradient(160deg, #f1f5fb, #aab6c6); box-shadow: 0 0 0 1px rgba(201,211,224,0.4), 0 0 12px rgba(201,211,224,0.25); }
+  .medal.bronze{ background: linear-gradient(160deg, #f0bd94, #b9713f); box-shadow: 0 0 0 1px rgba(224,160,114,0.4), 0 0 12px rgba(224,160,114,0.25); }
+
+  tr.top1{ background: linear-gradient(90deg, rgba(255,209,102,0.10), rgba(255,209,102,0.02)) !important; }
+  tr.top2{ background: linear-gradient(90deg, rgba(201,211,224,0.08), rgba(201,211,224,0.02)) !important; }
+  tr.top3{ background: linear-gradient(90deg, rgba(224,160,114,0.08), rgba(224,160,114,0.02)) !important; }
+  tr.top1:hover, tr.top2:hover, tr.top3:hover{ filter: brightness(1.08); }
+
+  .roll-no{ font-weight: 600; color: var(--ink); font-family: var(--mono); }
+  .roll-no.top{ color: #fff; }
+
+  .score-cell{ font-weight: 700; color: var(--accent); }
+
+  .eff-pos{ color: #5ee6a0; }
+  .eff-neg{ color: #ff8577; }
+  .eff-zero{ color: var(--ink-faint); }
+
+  /* ---------- footnotes ---------- */
+
+  .scoring-note{
+    margin-top: 22px;
+    font-size: 13px;
+    color: var(--ink-dim);
+    line-height: 1.6;
+  }
+  .scoring-note b{ color: var(--ink); }
+
+  .legend{
+    margin-top: 8px;
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    line-height: 1.6;
+  }
+  .legend code{
+    font-family: var(--mono);
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    padding: 1px 6px;
+    border-radius: 4px;
+    color: var(--ink-dim);
+  }
+
+  .note{
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+    color: var(--ink-faint);
+    line-height: 1.5;
+  }
+  .note .line{ display: flex; align-items: flex-start; gap: 10px; }
+  .note svg{ flex-shrink: 0; margin-top: 2px; }
+
+  /* ---------- responsive: card layout on small screens ---------- */
+
+  @media (max-width: 680px){
+    .wrap{ padding: 32px 14px 60px; }
+
+    thead{ display: none; }
+
+    table, tbody, tr, td{ display: block; width: 100%; }
+
+    tbody tr{
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      margin-bottom: 12px;
+      padding: 14px 16px 6px;
+      background: var(--bg-row) !important;
+    }
+    tr.top1{ border-color: rgba(255,209,102,0.5); }
+    tr.top2{ border-color: rgba(201,211,224,0.4); }
+    tr.top3{ border-color: rgba(224,160,114,0.4); }
+
+    tbody td{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px dashed var(--line-soft);
+      padding: 8px 0;
+      white-space: normal;
+      text-align: right;
+    }
+    tbody tr td:last-child{ border-bottom: none; }
+
+    tbody td::before{
+      content: attr(data-label);
+      font-family: var(--mono);
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-faint);
+      font-weight: 600;
+    }
+
+    tbody td:first-child{
+      padding-top: 0;
+    }
+    tbody td:first-child::before{ display:none; }
+    .rank-cell{ font-size: 15px; }
+
+    .controls-row{ flex-direction: column; align-items: stretch; }
+    .action-group{ justify-content: flex-start; }
+  }
+
+  /* ============================================================
+     PRINT / SAVE-AS-PDF — snapshot styling only. On-screen design
+     is untouched; this stylesheet applies only when printing.
+     ============================================================ */
+  @media print{
+    body{
+      background: #ffffff;
+      color: #111111;
+    }
+    .controls-row,
+    .note,
+    .eyebrow::before{
+      display: none !important;
+    }
+    .subtitle{ color: #444; }
+    .panel{
+      background: #ffffff;
+      border: 1px solid #ccc;
+    }
+    .panel-head{ border-bottom: 1px solid #ccc; }
+    .panel-head h2, .panel-head .count{ color: #333; }
+    thead th{ color: #333; border-bottom: 1px solid #999; }
+    tbody td{ border-bottom: 1px solid #ddd; color: #111; }
+    tbody tr:nth-child(odd){ background: #fafafa; }
+    tbody tr:nth-child(even){ background: #ffffff; }
+    tr.top1, tr.top2, tr.top3{ background: #fff8e6 !important; }
+    .roll-no, .roll-no.top{ color: #111; }
+    .score-cell{ color: #b5760a; }
+    .meta-chip{ background: #f2f2f2; border-color: #ccc; color: #333; }
+    .meta-chip b{ color: #111; }
+    .scoring-note, .legend{ color: #333; }
+    .legend code{ background: #f2f2f2; border-color: #ccc; color: #333; }
+    h1 #assignment-title{ color: #a56a00; }
+    a[href]{ color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="eyebrow">Course Leaderboard</div>
+  <h1><span id="assignment-title">Loading…</span></h1>
+  <p class="subtitle">Ranking of student submissions based on retrieval quality and efficiency on the latest evaluation set.</p>
+
+  <div class="controls-row">
+    <div class="selector-group">
+      <label for="assignment-select">Assignment</label>
+      <select id="assignment-select" aria-label="Select assignment"></select>
+    </div>
+    <div class="action-group">
+      <button id="download-csv-btn" class="btn" type="button" title="Download the current leaderboard as a CSV file">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 1.5v8.5m0 0L4.8 6.8M8 10l3.2-3.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 11.5v1.8c0 .66.54 1.2 1.2 1.2h9.6c.66 0 1.2-.54 1.2-1.2v-1.8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Download CSV
+      </button>
+      <button id="download-pdf-btn" class="btn btn-primary" type="button" title="Open a print-friendly view to save as PDF">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6V2.6c0-.33.27-.6.6-.6h5.2l2.2 2.2v1.8" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+          <rect x="2" y="6" width="12" height="5.4" rx="1" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M4.6 13.4V11.4h6.8v2c0 .33-.27.6-.6.6H5.2c-.33 0-.6-.27-.6-.6Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+        </svg>
+        Print / Save PDF
+      </button>
+    </div>
+  </div>
+
+  <p id="status-message" role="status" hidden></p>
+
+  <div class="meta-row">
+    <div class="meta-chip"><span class="dot"></span>Last updated: <b id="updated-at">—</b></div>
+    <div class="meta-chip">Submissions: <b id="entry-count">—</b></div>
+    <div class="meta-chip">Sorted by: <b>Final Score</b></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Standings</h2>
+      <span class="count" id="panel-count"></span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Roll No.</th>
+          <th>nDCG@10</th>
+          <th>MAP</th>
+          <th>Efficiency</th>
+          <th>Final Score</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-body">
+        <!-- rows injected by leaderboard.js -->
+      </tbody>
+    </table>
+  </div>
+
+  <p class="scoring-note"><b>Scoring:</b> Final Score = 70% nDCG@10 + 20% MAP + Efficiency Adjustment (±10%).</p>
+
+  <div class="legend">
+    <code>nDCG@10</code> — normalized discounted cumulative gain at rank 10 &nbsp;·&nbsp;
+    <code>MAP</code> — mean average precision &nbsp;·&nbsp;
+    <code>Efficiency</code> — efficiency adjustment applied to the final score
+  </div>
+
+  <div class="note">
+    <div class="line">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="8" cy="8" r="7" stroke="#5f6a7a" stroke-width="1.2"/>
+        <path d="M8 7.2V11.4" stroke="#5f6a7a" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="8" cy="4.8" r="0.9" fill="#5f6a7a"/>
+      </svg>
+      <span>Leaderboard is updated periodically by the course staff.</span>
+    </div>
+    <div class="line">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="8" cy="8" r="7" stroke="#5f6a7a" stroke-width="1.2"/>
+        <path d="M8 7.2V11.4" stroke="#5f6a7a" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="8" cy="4.8" r="0.9" fill="#5f6a7a"/>
+      </svg>
+      <span>Scores shown are based on the latest evaluation run and may change with subsequent submissions.</span>
+    </div>
+  </div>
+
+</div>
+
+<script src="leaderboard.js"></script>
+</body>
+</html>
