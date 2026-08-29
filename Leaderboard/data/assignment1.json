@@ -1,12 +1,46 @@
 {
   "assignment": "Assignment 1: Sparse Retrieval Arena",
-  "lastUpdated": "August 12, 2026 — 10:00 AM IST",
+  "lastUpdated": "August 29, 2026 — 4:00 PM IST",
   "entries": [
-    { "rollNo": "2026XXXX", "ndcg": 0.6124, "map": 0.1432, "efficiency": 0.08 },
-    { "rollNo": "2026YYYY", "ndcg": 0.5981, "map": 0.1510, "efficiency": 0.04 },
-    { "rollNo": "2026ZZZZ", "ndcg": 0.5753, "map": 0.1622, "efficiency": 0.02 },
-    { "rollNo": "2026AAAA", "ndcg": 0.5602, "map": 0.1388, "efficiency": 0.01 },
-    { "rollNo": "2026BBBB", "ndcg": 0.5490, "map": 0.1290, "efficiency": -0.02 },
-    { "rollNo": "2026CCCC", "ndcg": 0.5310, "map": 0.1350, "efficiency": 0.00 }
+    {
+      "rollNo": "Samarth Agrawal",
+      "ndcg": 0.398362,
+      "map": 0.007831,
+      "indexSize": 119026201,
+      "buildTime": 9.858954,
+      "queryLatency": 424.726444
+    },
+    {
+      "rollNo": "Akanksha Akanksha",
+      "ndcg": 0.602204,
+      "map": 0.015013,
+      "indexSize": 195383349,
+      "buildTime": 132.695140,
+      "queryLatency": 55.213085
+    },
+    {
+      "rollNo": "Ankita Ankita",
+      "ndcg": 0.566614,
+      "map": 0.012988,
+      "indexSize": 112306721,
+      "buildTime": 13.423498,
+      "queryLatency": 23.603247
+    },
+    {
+      "rollNo": "Ayush Arya",
+      "ndcg": 0.641765,
+      "map": 0.015985,
+      "indexSize": 439269097,
+      "buildTime": 20.572060,
+      "queryLatency": 89.593447
+    },
+    {
+      "rollNo": "Mohit Athikamsetty",
+      "ndcg": 0.663833,
+      "map": 0.016446,
+      "indexSize": 188059370,
+      "buildTime": 15.473745,
+      "queryLatency": 143.975438
+    }
   ]
 }
