@@ -152,7 +152,7 @@ function fmt4(n) {
   return Number(n).toFixed(4);
 }
 function fmtSize(n) {
-  return `${Math.round(n)} MB`;
+  return `${Math.round(n)} bytes`;
 }
 function fmtEff(n) {
   const v = Number(n);
