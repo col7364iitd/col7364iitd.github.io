@@ -497,11 +497,12 @@
     </table>
   </div>
 
-  <p class="scoring-note"><b>Scoring:</b> Final Score = 70% nDCG@10 + 20% MAP + Efficiency Adjustment (±10%).</p>
+  <p class="scoring-note"><b>Scoring:</b> Final Score = 70% nDCG@10 + 10% MAP@10 + 10% Index Size + Efficiency Adjustment (±10%).</p>
 
   <div class="legend">
     <code>nDCG@10</code> — normalized discounted cumulative gain at rank 10 &nbsp;·&nbsp;
-    <code>MAP</code> — mean average precision &nbsp;·&nbsp;
+    <code>MAP@10</code> — mean average precision computed over the top 10 results
+    <code>Index Size</code> — on-disk index size relative to the class median &nbsp;·&nbsp;
     <code>Efficiency</code> — efficiency adjustment applied to the final score
   </div>
 
