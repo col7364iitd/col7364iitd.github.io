@@ -440,7 +440,7 @@
 
   <div class="eyebrow">Course Leaderboard</div>
   <h1><span id="assignment-title">Loading…</span></h1>
-  <p class="subtitle">Ranking of student submissions based on retrieval quality and efficiency on the latest evaluation set.</p>
+  <p class="subtitle">Provisional ranking on the 50 released TREC-COVID development topics. This is not the final held-out evaluation.</p>
 
   <div class="controls-row">
     <div class="selector-group">
@@ -471,7 +471,7 @@
   <div class="meta-row">
     <div class="meta-chip"><span class="dot"></span>Last updated: <b id="updated-at">—</b></div>
     <div class="meta-chip">Submissions: <b id="entry-count">—</b></div>
-    <div class="meta-chip">Sorted by: <b>Final Score</b></div>
+    <div class="meta-chip">Sorted by: <b>Dev Score</b></div>
   </div>
 
   <div class="panel">
@@ -488,7 +488,7 @@
           <th>MAP@10</th>
           <th>Index Size</th>
           <th>Efficiency</th>
-          <th>Final Score</th>
+          <th>Dev Score</th>
         </tr>
       </thead>
       <tbody id="leaderboard-body">
@@ -497,7 +497,7 @@
     </table>
   </div>
 
-  <p class="scoring-note"><b>Scoring:</b> Final Score = 70% nDCG@10 + 10% MAP@10 + 10% Index Size + Efficiency Adjustment (±10%).</p>
+  <p class="scoring-note"><b>Scoring:</b> Dev Score = 70% nDCG@10 + 10% MAP@10 + 10% Index Size + Efficiency Adjustment (±10%). Final rankings use the private held-out evaluation.</p>
 
   <div class="legend">
     <code>nDCG@10</code> — normalized discounted cumulative gain at rank 10 &nbsp;·&nbsp;
