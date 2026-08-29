@@ -33,6 +33,7 @@ const DEFAULT_ASSIGNMENT = "assignment1";
 // Scoring policy: 70% nDCG@10 + 20% MAP + Efficiency Adjustment (±10%)
 const WEIGHT_NDCG = 0.70;
 const WEIGHT_MAP = 0.20;
+const WEIGHT_INDEX_SIZE = 0.10;
 
 // Holds the currently rendered leaderboard so the download buttons
 // always export exactly what's on screen.
@@ -60,7 +61,7 @@ async function loadLeaderboardData(source) {
 function calculateScores(entries) {
   const scored = entries.map((row) => ({
     ...row,
-    finalScore: WEIGHT_NDCG * row.ndcg + WEIGHT_MAP * row.map + row.efficiency,
+     finalScore: WEIGHT_NDCG * row.ndcg + WEIGHT_MAP * row.map + row.efficiency + WEIGHT_INDEX_SIZE * row.indexSizeScore,
   }));
 
   scored.sort((a, b) => {
