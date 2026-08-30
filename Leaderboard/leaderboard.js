@@ -25,11 +25,12 @@
 //    assignment to its data file. Keep this separate from scores.
 // ----------------------------------------------------------------
 const ASSIGNMENTS = {
-  assignment1: { label: "Assignment 1", file: "data/assignment1.json" },
+  phase1: { label: "Phase 1", file: "data/assignment1.json" },
+  phase2: { label: "Phase 2", file: "data/assignment2.json" },
   // assignment3: { label: "Assignment 3", file: "data/assignment3.json" },
 };
 
-const DEFAULT_ASSIGNMENT = "assignment1";
+const DEFAULT_ASSIGNMENT = "phase2";
 
 // Holds the currently rendered leaderboard so the download buttons
 // always export exactly what's on screen.
@@ -93,6 +94,7 @@ function renderLeaderboard(state) {
   currentState = state;
 
   document.getElementById("assignment-title").textContent = state.assignmentTitle;
+  document.getElementById("dataset-description").textContent = state.description;
   document.getElementById("updated-at").textContent = state.lastUpdated;
   document.getElementById("entry-count").textContent = state.entries.length;
   document.getElementById("panel-count").textContent = `${state.entries.length} submissions`;
@@ -156,6 +158,7 @@ async function selectAssignment(assignmentId) {
     renderLeaderboard({
       assignmentId,
       assignmentTitle: raw.assignment || config.label,
+      description: raw.description || "",
       lastUpdated: raw.lastUpdated || "—",
       entries: ranked,
     });
