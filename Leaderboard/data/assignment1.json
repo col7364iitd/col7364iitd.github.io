@@ -1,195 +1,357 @@
 {
-  "assignment": "Assignment 1: Held out Leaderboard",
-  "lastUpdated": "August 30, 2026",
+  "assignment": "Assignment 1: Leaderboard",
+  "lastUpdated": "August 31, 2026",
   "entries": [
     {
       "rank": 1,
-      "student": "Ahilaan Saxena",
-      "ndcg": 0.199005,
-      "map": 0.107151,
-      "indexSize": 14938604,
-      "efficiency": 0.090928,
-      "devScore": 0.316978
+      "student": "Aditya Anand",
+      "ndcg": 0.223476,
+      "map": 0.126312,
+      "indexSize": 13708741,
+      "efficiency": 0.083033,
+      "devScore": 0.331193
     },
     {
       "rank": 2,
-      "student": "Abhinav J",
-      "ndcg": 0.216408,
-      "map": 0.119651,
-      "indexSize": 15177844,
-      "efficiency": 0.066762,
-      "devScore": 0.305327
+      "student": "Ahilaan Saxena",
+      "ndcg": 0.212784,
+      "map": 0.117957,
+      "indexSize": 14938604,
+      "efficiency": 0.088994,
+      "devScore": 0.323969
     },
     {
       "rank": 3,
-      "student": "Ayush Singhal",
-      "ndcg": 0.207303,
-      "map": 0.109993,
-      "indexSize": 16147208,
-      "efficiency": 0.076979,
-      "devScore": 0.304487
+      "student": "Abhinav J",
+      "ndcg": 0.216408,
+      "map": 0.119651,
+      "indexSize": 15276946,
+      "efficiency": 0.080853,
+      "devScore": 0.317195
     },
     {
       "rank": 4,
-      "student": "Ambar Gogia",
-      "ndcg": 0.227650,
-      "map": 0.127583,
-      "indexSize": 17583456,
-      "efficiency": 0.065862,
-      "devScore": 0.303862
+      "student": "Palaash Goel",
+      "ndcg": 0.218561,
+      "map": 0.120676,
+      "indexSize": 18636453,
+      "efficiency": 0.087714,
+      "devScore": 0.312374
     },
     {
       "rank": 5,
-      "student": "Gandem Nitin",
-      "ndcg": 0.222935,
-      "map": 0.125146,
-      "indexSize": 11198507,
-      "efficiency": 0.038542,
-      "devScore": 0.297490
+      "student": "Ayush Singhal",
+      "ndcg": 0.209682,
+      "map": 0.116191,
+      "indexSize": 16147208,
+      "efficiency": 0.082408,
+      "devScore": 0.310253
     },
     {
       "rank": 6,
-      "student": "Chayan Mahato",
-      "ndcg": 0.206750,
-      "map": 0.115560,
-      "indexSize": 10857717,
-      "efficiency": 0.043910,
-      "devScore": 0.291876
+      "student": "Gandem Nitin",
+      "ndcg": 0.222928,
+      "map": 0.125127,
+      "indexSize": 11198507,
+      "efficiency": 0.049665,
+      "devScore": 0.307255
     },
     {
       "rank": 7,
+      "student": "Ambar Gogia",
+      "ndcg": 0.227650,
+      "map": 0.127583,
+      "indexSize": 17485074,
+      "efficiency": 0.063648,
+      "devScore": 0.299917
+    },
+    {
+      "rank": 8,
+      "student": "Siddharth Siddharth",
+      "ndcg": 0.199174,
+      "map": 0.109194,
+      "indexSize": 14226044,
+      "efficiency": 0.067337,
+      "devScore": 0.294727
+    },
+    {
+      "rank": 9,
+      "student": "Priyanka Sar",
+      "ndcg": 0.200818,
+      "map": 0.115038,
+      "indexSize": 9722791,
+      "efficiency": 0.043864,
+      "devScore": 0.290806
+    },
+    {
+      "rank": 10,
       "student": "Parv Shah",
       "ndcg": 0.207188,
       "map": 0.116408,
       "indexSize": 13568741,
-      "efficiency": 0.047855,
-      "devScore": 0.285814
-    },
-    {
-      "rank": 8,
-      "student": "Preesha Agrawal",
-      "ndcg": 0.203280,
-      "map": 0.113784,
-      "indexSize": 17025857,
-      "efficiency": 0.008510,
-      "devScore": 0.230210
-    },
-    {
-      "rank": 9,
-      "student": "Sandeep Kumar",
-      "ndcg": 0.197345,
-      "map": 0.109031,
-      "indexSize": 16609283,
-      "efficiency": 0.006733,
-      "devScore": 0.225401
-    },
-    {
-      "rank": 10,
-      "student": "Divakar Kushwaha",
-      "ndcg": 0.167353,
-      "map": 0.089769,
-      "indexSize": 17380115,
-      "efficiency": 0.029191,
-      "devScore": 0.221982
+      "efficiency": 0.046844,
+      "devScore": 0.283166
     },
     {
       "rank": 11,
-      "student": "Priyanka Sar",
-      "ndcg": 0.170668,
-      "map": 0.091921,
-      "indexSize": 16874117,
-      "efficiency": 0.023279,
-      "devScore": 0.220546
+      "student": "Chayan Mahato",
+      "ndcg": 0.206750,
+      "map": 0.115560,
+      "indexSize": 10857717,
+      "efficiency": 0.032855,
+      "devScore": 0.279512
     },
     {
       "rank": 12,
-      "student": "Yuvraj Verma",
-      "ndcg": 0.199562,
-      "map": 0.109113,
-      "indexSize": 21669644,
-      "efficiency": -0.005800,
-      "devScore": 0.195018
+      "student": "Purushottam Sharma",
+      "ndcg": 0.195251,
+      "map": 0.110693,
+      "indexSize": 10659519,
+      "efficiency": 0.020855,
+      "devScore": 0.259760
     },
     {
       "rank": 13,
-      "student": "Sambhav Singwi",
-      "ndcg": 0.186682,
-      "map": 0.099392,
-      "indexSize": 16129897,
-      "efficiency": -0.018082,
-      "devScore": 0.193996
+      "student": "Anushka Gupta",
+      "ndcg": 0.178455,
+      "map": 0.092419,
+      "indexSize": 13938741,
+      "efficiency": 0.035460,
+      "devScore": 0.247806
     },
     {
       "rank": 14,
-      "student": "Krishna Purbia",
-      "ndcg": 0.177814,
-      "map": 0.093206,
-      "indexSize": 18915268,
-      "efficiency": -0.005058,
-      "devScore": 0.189510
+      "student": "Preesha Agrawal",
+      "ndcg": 0.203262,
+      "map": 0.113742,
+      "indexSize": 17025857,
+      "efficiency": 0.027196,
+      "devScore": 0.246826
     },
     {
       "rank": 15,
-      "student": "Purushottam Sharma",
-      "ndcg": 0.193449,
-      "map": 0.110428,
-      "indexSize": 21849058,
-      "efficiency": -0.018762,
-      "devScore": 0.177220
+      "student": "Divakar Kushwaha",
+      "ndcg": 0.190868,
+      "map": 0.105416,
+      "indexSize": 17380115,
+      "efficiency": 0.027606,
+      "devScore": 0.236326
     },
     {
       "rank": 16,
       "student": "Hrithik Sharma",
       "ndcg": 0.215209,
       "map": 0.120141,
-      "indexSize": 19245499,
-      "efficiency": -0.069917,
-      "devScore": 0.152255
+      "indexSize": 16722565,
+      "efficiency": 0.002082,
+      "devScore": 0.231914
     },
     {
       "rank": 17,
-      "student": "Akanksha Akanksha",
-      "ndcg": 0.218171,
-      "map": 0.122863,
-      "indexSize": 27352817,
-      "efficiency": -0.056399,
-      "devScore": 0.137020
+      "student": "Maaz Akhtar",
+      "ndcg": 0.182855,
+      "map": 0.095155,
+      "indexSize": 11268227,
+      "efficiency": 0.003315,
+      "devScore": 0.229580
     },
     {
       "rank": 18,
-      "student": "Mohit Athikamsetty",
-      "ndcg": 0.186780,
-      "map": 0.103938,
-      "indexSize": 19854737,
-      "efficiency": -0.064877,
-      "devScore": 0.133438
+      "student": "Gaurav Jain",
+      "ndcg": 0.213395,
+      "map": 0.118361,
+      "indexSize": 53927033,
+      "efficiency": 0.067074,
+      "devScore": 0.228287
     },
     {
       "rank": 19,
+      "student": "Aditya Bansal",
+      "ndcg": 0.172383,
+      "map": 0.092254,
+      "indexSize": 12363347,
+      "efficiency": 0.011708,
+      "devScore": 0.226021
+    },
+    {
+      "rank": 20,
+      "student": "Krishna Purbia",
+      "ndcg": 0.176745,
+      "map": 0.093490,
+      "indexSize": 11943298,
+      "efficiency": 0.004047,
+      "devScore": 0.223198
+    },
+    {
+      "rank": 21,
+      "student": "Vishesh Sehrawat",
+      "ndcg": 0.150576,
+      "map": 0.079366,
+      "indexSize": 11156443,
+      "efficiency": 0.017489,
+      "devScore": 0.220022
+    },
+    {
+      "rank": 22,
+      "student": "Sandeep Kumar",
+      "ndcg": 0.197345,
+      "map": 0.109031,
+      "indexSize": 16609283,
+      "efficiency": -0.011640,
+      "devScore": 0.205025
+    },
+    {
+      "rank": 23,
+      "student": "Sambhav Singwi",
+      "ndcg": 0.186438,
+      "map": 0.099049,
+      "indexSize": 16129897,
+      "efficiency": -0.011440,
+      "devScore": 0.198488
+    },
+    {
+      "rank": 24,
+      "student": "Peeyush Motwal",
+      "ndcg": 0.200655,
+      "map": 0.112452,
+      "indexSize": 22892184,
+      "efficiency": -0.001675,
+      "devScore": 0.192792
+    },
+    {
+      "rank": 25,
+      "student": "Yuvraj Verma",
+      "ndcg": 0.199562,
+      "map": 0.109113,
+      "indexSize": 21669644,
+      "efficiency": -0.020434,
+      "devScore": 0.177770
+    },
+    {
+      "rank": 26,
+      "student": "Daksh Gupta",
+      "ndcg": 0.219505,
+      "map": 0.123261,
+      "indexSize": 16850294,
+      "efficiency": -0.060448,
+      "devScore": 0.172198
+    },
+    {
+      "rank": 27,
+      "student": "Prerak Singh",
+      "ndcg": 0.185654,
+      "map": 0.101343,
+      "indexSize": 11367529,
+      "efficiency": -0.056602,
+      "devScore": 0.171849
+    },
+    {
+      "rank": 28,
+      "student": "Mukul Siloliya",
+      "ndcg": 0.205637,
+      "map": 0.115045,
+      "indexSize": 17755184,
+      "efficiency": -0.049658,
+      "devScore": 0.168880
+    },
+    {
+      "rank": 29,
+      "student": "Snigdhadyut Dash",
+      "ndcg": 0.207217,
+      "map": 0.115553,
+      "indexSize": 35469665,
+      "efficiency": -0.004274,
+      "devScore": 0.152334
+    },
+    {
+      "rank": 30,
+      "student": "Mohit Athikamsetty",
+      "ndcg": 0.186780,
+      "map": 0.103938,
+      "indexSize": 19920533,
+      "efficiency": -0.061004,
+      "devScore": 0.134656
+    },
+    {
+      "rank": 31,
       "student": "Kathula Haasini",
       "ndcg": 0.216755,
       "map": 0.121820,
       "indexSize": 29877452,
-      "efficiency": -0.050712,
-      "devScore": 0.131928
+      "efficiency": -0.052502,
+      "devScore": 0.126534
     },
     {
-      "rank": 20,
-      "student": "Siddharth Siddharth",
-      "ndcg": 0.209475,
-      "map": 0.114875,
-      "indexSize": 18178528,
+      "rank": 32,
+      "student": "Akanksha Akanksha",
+      "ndcg": 0.218171,
+      "map": 0.122863,
+      "indexSize": 27352817,
+      "efficiency": -0.066505,
+      "devScore": 0.123616
+    },
+    {
+      "rank": 33,
+      "student": "Adit Jindal",
+      "ndcg": 0.208138,
+      "map": 0.114940,
+      "indexSize": 17371453,
       "efficiency": -0.100000,
-      "devScore": 0.121724
+      "devScore": 0.121796
     },
     {
-      "rank": 21,
+      "rank": 34,
+      "student": "Pramod Meena",
+      "ndcg": 0.191811,
+      "map": 0.106589,
+      "indexSize": 22055772,
+      "efficiency": -0.072879,
+      "devScore": 0.118119
+    },
+    {
+      "rank": 35,
+      "student": "Ayush Ahuja",
+      "ndcg": 0.190807,
+      "map": 0.103776,
+      "indexSize": 36065610,
+      "efficiency": -0.032592,
+      "devScore": 0.111350
+    },
+    {
+      "rank": 36,
+      "student": "Mohit Dua",
+      "ndcg": 0.211693,
+      "map": 0.116703,
+      "indexSize": 68898257,
+      "efficiency": -0.051278,
+      "devScore": 0.108577
+    },
+    {
+      "rank": 37,
       "student": "Anjalee Nayak",
-      "ndcg": 0.204188,
-      "map": 0.102288,
+      "ndcg": 0.199496,
+      "map": 0.100921,
       "indexSize": 23576128,
       "efficiency": -0.100000,
-      "devScore": 0.096060
+      "devScore": 0.089796
+    },
+    {
+      "rank": 38,
+      "student": "Naman Dhankhar",
+      "ndcg": 0.207921,
+      "map": 0.116786,
+      "indexSize": 40802315,
+      "efficiency": -0.089323,
+      "devScore": 0.067901
+    },
+    {
+      "rank": 39,
+      "student": "Pallav Kamad",
+      "ndcg": 0.200519,
+      "map": 0.110036,
+      "indexSize": 32585476,
+      "efficiency": -0.100000,
+      "devScore": 0.055778
     }
   ]
 }
