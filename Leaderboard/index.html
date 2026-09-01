@@ -101,6 +101,13 @@
     margin-bottom: 18px;
   }
 
+  .selectors{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+  }
+
   .selector-group{
     display: flex;
     align-items: center;
@@ -114,7 +121,8 @@
     color: var(--ink-faint);
   }
 
-  select#assignment-select{
+  select#assignment-select,
+  select#ranking-select{
     background: var(--bg-panel);
     border: 1px solid var(--line);
     color: var(--ink);
@@ -131,7 +139,8 @@
     background-position: right 12px center;
     padding-right: 30px;
   }
-  select#assignment-select:focus{ outline: 1px solid var(--accent); }
+  select#assignment-select:focus,
+  select#ranking-select:focus{ outline: 1px solid var(--accent); }
 
   .action-group{
     display: flex;
@@ -394,6 +403,7 @@
     .rank-cell{ font-size: 15px; }
 
     .controls-row{ flex-direction: column; align-items: stretch; }
+    .selectors{ flex-direction: column; align-items: stretch; gap: 10px; }
     .action-group{ justify-content: flex-start; }
   }
 
@@ -443,9 +453,15 @@
   <p class="subtitle">Provisional ranking based on the held-out evaluation dataset for the Phase 2 Competition Round.</p>
 
   <div class="controls-row">
-    <div class="selector-group">
-      <label for="assignment-select">Assignment</label>
-      <select id="assignment-select" aria-label="Select assignment"></select>
+    <div class="selectors">
+      <div class="selector-group">
+        <label for="assignment-select">Assignment</label>
+        <select id="assignment-select" aria-label="Select assignment"></select>
+      </div>
+      <div class="selector-group">
+        <label for="ranking-select">Ranking</label>
+        <select id="ranking-select" aria-label="Select ranking version"></select>
+      </div>
     </div>
     <div class="action-group">
       <button id="download-csv-btn" class="btn" type="button" title="Download the current leaderboard as a CSV file">
@@ -471,7 +487,7 @@
   <div class="meta-row">
     <div class="meta-chip"><span class="dot"></span>Last updated: <b id="updated-at">—</b></div>
     <div class="meta-chip">Submissions: <b id="entry-count">—</b></div>
-    <div class="meta-chip">Sorted by: <b>Dev Score</b></div>
+    <div class="meta-chip">Sorted by: <b id="sorted-by-label">Dev Score</b></div>
   </div>
 
   <div class="panel">
@@ -488,7 +504,7 @@
           <th>MAP@10</th>
           <th>Index Size</th>
           <th>Efficiency</th>
-          <th>Dev Score</th>
+          <th id="score-col-header">Dev Score</th>
         </tr>
       </thead>
       <tbody id="leaderboard-body">
@@ -497,7 +513,7 @@
     </table>
   </div>
 
-  <p class="scoring-note"><b>Scoring:</b> Dev Score = 70% nDCG@10 + 10% MAP@10 + 10% Index Size + Efficiency Adjustment (±10%). Final rankings use the private held-out evaluation.</p>
+  <p class="scoring-note"><b>Scoring:</b> Dev Score = 70% nDCG@10 + 10% MAP@10 + 10% Index Size + Efficiency Adjustment (±10%). Final rankings use the private held-out evaluation. Use the Ranking dropdown above to switch between the New/Revised ranking and the Old ranking.</p>
 
   <div class="legend">
     <code>nDCG@10</code> — normalized discounted cumulative gain at rank 10 &nbsp;·&nbsp;
