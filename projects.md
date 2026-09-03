@@ -24,6 +24,8 @@ Each of these projects below have
 - a scope compatible with modest computing resources ("modest" may still require significant GPU usage); and
 - a plausible route to a workshop, ECIR, or SIGIR submission if the results are sufficiently strong.
 
+**There is also a small preliminary document for each project that was generated with the help of a GenAI tool by the instructor. Once the project selection is finalised, instructor will share the file with respective students**
+
 **Publication is not guaranteed**. 
 A successful course project should nevertheless be designed and evaluated with **publication-quality care**. 
 
@@ -48,21 +50,23 @@ A good project should change or carefully study at least one of the following: t
 All core experiments should be feasible on approximately **one 16 GB GPU**. Suitable methods include frozen-model inference, training a small prediction head or adapter, fine-tuning BERT-sized encoders, and 4-bit LoRA/QLoRA tuning of a 1.5B–3B parameter language model. A larger model may be used for limited teacher-label generation, but the project must not depend on sustained access to a large GPU cluster or an expensive proprietary API.
 
 ## Submission stages: 
-### Stage 1: Proposal Checklist (deadline: between 20th to 23rd September) 
+
+### Stage 1: Proposal Checklist (deadline: between 20th September to 23rd September) 
+(This is the stage where the instructor can suggest reformulating your project scope). 
 
 A detailed report that contains: 
 
 1. one primary hypothesis and one backoff formulation;
 
-2. the closest three papers and a paragraph explaining the novelty boundary;
+2. the closest three papers and a paragraph explaining the novelty of the proposed hypothesis;
 
-3. a benchmark and split plan, including leakage/contamination controls;
+3. a benchmark and split plan, (be careful of leakage/contamination issues while choosing benchmarks);
 
 4. the strongest classical, neural, and recent baseline that will be reproduced;
 
 ### Stage 2: Initial Pilot (deadline: between 5th October to 12th October)
 
-5. a two-week pilot -- you can decide what this pilot should be in accordance with the report that you had submitted above;
+5. a preliminary pilot -- you can decide what this pilot should be in accordance with the report that you had submitted above;
 
 6. the exact GPU, API, annotation, and indexing budget -- this is beyond the one you need for initial pilot;
 
@@ -457,15 +461,13 @@ Vision–language encoders often preserve topical similarity while ignoring nega
 
 ## How to express project preferences
 
-Submit the following for your **top three** projects, in ranked order:
+Submit the following for your **top three** projects, in ranked order ((submission link)[https://forms.cloud.microsoft/r/GDe24ct28s])
 
 1. project number and title;
 2. a short explanation of why the problem interests you;
 3. relevant background in IR, machine learning, NLP, vision, graphs, or systems;
-4. one tentative research question or extension you would like to investigate; and
-5. any compute or data-access constraints that the instructor should know.
 
-Teams should not begin large-scale model training before the scope and evaluation plan have been approved. The first milestone for every project will be a short literature review, a dataset card, and reproduction of a credible baseline.
+Teams should not begin large-scale model training before the scope and evaluation plan have been approved. The first milestone for every project will be a short literature review -- although the deadline is nearly at the end of the month, **you are strongly advised to submit as early as possible**. 
 
 ## Scope note
 
