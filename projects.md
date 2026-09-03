@@ -71,7 +71,7 @@ A detailed report that contains:
 
 ### Stage 2: Initial Pilot (deadline: between 5th October to 12th October)
 
-**Weightage: 25%*** 
+**Weightage: 25%**
 
 5. a preliminary pilot -- you can decide what this pilot should be in accordance with the report that you had submitted above;
 
@@ -473,7 +473,7 @@ Vision–language encoders often preserve topical similarity while ignoring nega
 
 ## How to express project preferences
 
-Submit the following for your **top three** projects, in ranked order ((submission link)[https://forms.cloud.microsoft/r/GDe24ct28s])
+Submit the following for your **top three** projects, in ranked order ([submission link](https://forms.cloud.microsoft/r/GDe24ct28s))
 
 1. project number and title;
 2. a short explanation of why the problem interests you;
