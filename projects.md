@@ -9,6 +9,10 @@ description: Tentative list of projects from the Instructor.
 
 ## COL764: Information Retrieval and Web Search — Semester I, 2026
 
+### All projects are to be done individually
+
+---
+
 **Status:** Tentative project list; the final scope will be agreed upon after an initial literature review.
 
 ## Purpose and expectations
@@ -53,6 +57,7 @@ All core experiments should be feasible on approximately **one 16 GB GPU**. Suit
 
 ### Stage 1: Proposal Checklist (deadline: between 20th September to 23rd September) 
 (This is the stage where the instructor can suggest reformulating your project scope). 
+**Weightage: 25%**
 
 A detailed report that contains: 
 
@@ -66,6 +71,8 @@ A detailed report that contains:
 
 ### Stage 2: Initial Pilot (deadline: between 5th October to 12th October)
 
+**Weightage: 25%*** 
+
 5. a preliminary pilot -- you can decide what this pilot should be in accordance with the report that you had submitted above;
 
 6. the exact GPU, API, annotation, and indexing budget -- this is beyond the one you need for initial pilot;
@@ -75,9 +82,12 @@ A detailed report that contains:
 8. A GitHub repository link that contains all the code & reports and maintained regularly.
 
 ### Stage 3 and Final: End of the project report (deadline: between 10th November to 18th November)
+**Weightage: 50%** 
 
 1. Full report of all the work done, SIGIR-style paper draft, Github repository, AI usage statement, and shared data artefacts. 
 Make sure at this stage you maintain all the final experiment logs, details of the statistical significant tests conducted.
+
+2. A demo + viva (as needed)
 
 ---
 
@@ -469,7 +479,7 @@ Submit the following for your **top three** projects, in ranked order ((submissi
 2. a short explanation of why the problem interests you;
 3. relevant background in IR, machine learning, NLP, vision, graphs, or systems;
 
-Teams should not begin large-scale model training before the scope and evaluation plan have been approved. The first milestone for every project will be a short literature review -- although the deadline is nearly at the end of the month, **you are strongly advised to submit as early as possible**. 
+You should not begin large-scale model training before the scope and evaluation plan have been approved. The first milestone for every project will be a short literature review -- although the deadline is nearly at the end of the month, **you are strongly advised to submit as early as possible**. 
 
 ## Scope note
 
