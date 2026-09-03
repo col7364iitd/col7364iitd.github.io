@@ -424,7 +424,7 @@ Graph retrievers often expand too many nodes or produce plausible but invalid pa
 
 - Sun et al., [Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph](https://openreview.net/forum?id=nnVO1PvbTv), ICLR 2024.
 - Luo et al., [Reasoning on Graphs: Faithful and Interpretable Large Language Model Reasoning](https://openreview.net/forum?id=ZGNWW7xZ6Q), ICLR 2024.
-- Li et al., [SymKGQA: Few-Shot Knowledge Graph Question Answering via Symbolic Program Generation](https://aclanthology.org/2024.acl-long.545/), ACL 2024.
+- Agrawal et al., [SymKGQA: Few-Shot Knowledge Graph Question Answering via Symbolic Program Generation](https://aclanthology.org/2024.acl-long.545/), ACL 2024.
 - He et al., [G-Retriever: Retrieval-Augmented Generation for Textual Graph Understanding and Question Answering](https://papers.nips.cc/paper_files/paper/2024/hash/efaf1c9726648c8ba363a5c927440529-Abstract-Conference.html), NeurIPS 2024.
 
 **Compute profile:** Keep the graph retriever and answer model mostly frozen; train a compact path scorer, verifier, or LoRA adapter.
