@@ -47,6 +47,34 @@ A good project should change or carefully study at least one of the following: t
 
 All core experiments should be feasible on approximately **one 16 GB GPU**. Suitable methods include frozen-model inference, training a small prediction head or adapter, fine-tuning BERT-sized encoders, and 4-bit LoRA/QLoRA tuning of a 1.5B–3B parameter language model. A larger model may be used for limited teacher-label generation, but the project must not depend on sustained access to a large GPU cluster or an expensive proprietary API.
 
+## Submission stages: 
+### Stage 1: Proposal Checklist (deadline: between 20th to 23rd September) 
+
+A detailed report that contains: 
+
+1. one primary hypothesis and one backoff formulation;
+
+2. the closest three papers and a paragraph explaining the novelty boundary;
+
+3. a benchmark and split plan, including leakage/contamination controls;
+
+4. the strongest classical, neural, and recent baseline that will be reproduced;
+
+### Stage 2: Initial Pilot (deadline: between 5th October to 12th October)
+
+5. a two-week pilot -- you can decide what this pilot should be in accordance with the report that you had submitted above;
+
+6. the exact GPU, API, annotation, and indexing budget -- this is beyond the one you need for initial pilot;
+
+7. a plan for statistical testing and at least 50 manually analyzed failures.
+
+8. A GitHub repository link that contains all the code & reports and maintained regularly.
+
+### Stage 3 and Final: End of the project report (deadline: between 10th November to 18th November)
+
+1. Full report of all the work done, SIGIR-style paper draft, Github repository, AI usage statement, and shared data artefacts. 
+Make sure at this stage you maintain all the final experiment logs, details of the statistical significant tests conducted.
+
 ---
 
 ## Project overview
