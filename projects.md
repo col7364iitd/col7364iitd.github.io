@@ -122,7 +122,8 @@ Most published systems apply one reformulation method uniformly. A publishable c
 
 - Gao et al., [Precise Zero-Shot Dense Retrieval without Relevance Labels (HyDE)](https://aclanthology.org/2023.acl-long.99/), ACL 2023.
 - Wang et al., [Query2doc: Query Expansion with Large Language Models](https://aclanthology.org/2023.emnlp-main.585/), EMNLP 2023.
-- Ma et al., [Large Language Models for Information Retrieval: A Survey of the Synergistic Interplay between Search and Large Language Models](https://aclanthology.org/2024.acl-long.517/), ACL 2024.
+- Feng et al., [Synergistic Interplay between Search and Large Language Models for
+Information Retrieval](https://aclanthology.org/2024.acl-long.517/), ACL 2024.
 
 **Compute profile:** Mostly frozen retrieval and LLM inference; train only a small router or adapter.
 
@@ -149,7 +150,7 @@ Instruction-following retrievers can appear successful by exploiting topic overl
 
 - Weller et al., [Promptriever: Instruction-Trained Retrievers Can Be Prompted Like Language Models](https://openreview.net/forum?id=odvSjn416y), ICLR 2025.
 - Weller et al., [FollowIR: Evaluating and Teaching Information Retrieval Models to Follow Instructions](https://aclanthology.org/2025.naacl-long.597/), NAACL 2025.
-- Su et al., [Efficient Instruction-Following Text Embedding for Information Retrieval](https://aclanthology.org/2025.acl-long.1196/), ACL 2025.
+- Feng et al., [Don’t Reinvent the Wheel: Efficient Instruction-Following Text Embedding based on Guided Space Transformation](https://aclanthology.org/2025.acl-long.1196/), ACL 2025.
 
 **Compute profile:** Fine-tune a BERT-sized dual encoder using LoRA or standard contrastive learning.
 
@@ -175,8 +176,8 @@ Reasoning-intensive retrieval remains difficult even for strong embedding models
 ### Starter readings
 
 - Su et al., [BRIGHT: A Realistic and Challenging Benchmark for Reasoning-Intensive Retrieval](https://openreview.net/forum?id=ykuc5q381b), ICLR 2025.
-- Wang et al., [Reinforced Query Reasoners for Reasoning-Intensive Retrieval](https://aclanthology.org/2025.emnlp-main.1078/), EMNLP 2025.
-- Li et al., [RaDeR: Retrieval-Augmented Dense Retrieval with Reasoning](https://aclanthology.org/2025.emnlp-main.1011/), EMNLP 2025.
+- Qin et al., [Reinforced Query Reasoners for Reasoning-Intensive Retrieval](https://aclanthology.org/2025.emnlp-main.1078/), EMNLP 2025.
+- Das et al., [RaDeR: Retrieval-Augmented Dense Retrieval with Reasoning](https://aclanthology.org/2025.emnlp-main.1011/), EMNLP 2025.
 
 **Compute profile:** 4-bit LoRA/QLoRA on a 1.5B–3B model; cache all retrieval candidates and rewards.
 
@@ -258,7 +259,7 @@ Queries vary in local density, ambiguity, and first-stage score distribution. Bu
 - Kulkarni et al., [Lexically-Accelerated Dense Retrieval](https://dl.acm.org/doi/10.1145/3539618.3591715), SIGIR 2023.
 - Zhang et al., [Hybrid Inverted Index Is a Robust Accelerator for Dense Retrieval](https://aclanthology.org/2023.emnlp-main.116/), EMNLP 2023.
 - Busolin et al., [Early Exit Strategies for Approximate k-NN Search in Dense Retrieval](https://dl.acm.org/doi/10.1145/3627673.3679903), CIKM 2024.
-- [Distribution-Aware Exploration for Adaptive HNSW Search](https://dl.acm.org/doi/10.1145/3786639), SIGMOD 2026.
+- Zhang and Miller, [Distribution-Aware Exploration for Adaptive HNSW Search](https://dl.acm.org/doi/10.1145/3786639), SIGMOD 2026.
 
 **Compute profile:** One frozen dense encoder; train a small regressor or classifier. The main experiments run on CPU after embeddings are cached.
 
@@ -286,7 +287,7 @@ Fixed multi-hop pipelines waste retrieval calls on easy questions and stop too e
 - Trivedi et al., [Interleaving Retrieval with Chain-of-Thought Reasoning for Knowledge-Intensive Multi-Step Questions](https://aclanthology.org/2023.acl-long.557/), ACL 2023.
 - Jiang et al., [Active Retrieval Augmented Generation](https://aclanthology.org/2023.emnlp-main.495/), EMNLP 2023.
 - Jeong et al., [Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity](https://aclanthology.org/2024.naacl-long.389/), NAACL 2024.
-- Wang et al., [KiRAG: Knowledge-Driven Iterative Retriever for Enhancing Retrieval-Augmented Generation](https://aclanthology.org/2025.acl-long.929/), ACL 2025.
+- Fang et al., [KiRAG: Knowledge-Driven Iterative Retriever for Enhancing Retrieval-Augmented Generation](https://aclanthology.org/2025.acl-long.929/), ACL 2025.
 
 **Compute profile:** Freeze the reader and retriever; train only the controller or a LoRA adapter on a small policy model.
 
@@ -314,7 +315,7 @@ A top-*k* set can contain individually relevant but redundant passages. Define a
 - Saad-Falcon et al., [ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems](https://aclanthology.org/2024.naacl-long.20/), NAACL 2024.
 - Ru et al., [RAGChecker: A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation](https://proceedings.neurips.cc/paper_files/paper/2024/hash/27245589131d17368cccdfa990cbf16e-Abstract-Datasets_and_Benchmarks_Track.html), NeurIPS 2024.
 - Niu et al., [RAGTruth: A Hallucination Corpus for Developing Trustworthy Retrieval-Augmented Language Models](https://aclanthology.org/2024.acl-long.585/), ACL 2024.
-- Ju et al., [Controlled Retrieval-augmented Context Evaluation for Long-form RAG (CRUX)](https://aclanthology.org/2025.findings-emnlp.1151/), Findings of EMNLP 2025.
+- Ju et al., [Controlled Retrieval-augmented Context Evaluation for Long-form RAG](https://aclanthology.org/2025.findings-emnlp.1151/), Findings of EMNLP 2025.
 
 **Compute profile:** Use a fixed small generator and cached candidates; train only a compact utility scorer or adapter.
 
@@ -341,8 +342,8 @@ LLM-generated relevance judgments can be inconsistent across prompts, batches, a
 
 - Faggioli et al., [Perspectives on Large Language Models for Relevance Judgment](https://dl.acm.org/doi/10.1145/3578337.3605136), ICTIR 2023.
 - Ni et al., [DIRAS: Efficient LLM Annotation of Document Relevance for Retrieval Augmented Generation](https://aclanthology.org/2025.naacl-long.271/), NAACL 2025.
-- [Efficient LLM-based Relevance Assessment through Batched Self-Consistency](https://aclanthology.org/2025.emnlp-main.1661/), EMNLP 2025.
-- [LLMJudge: A Benchmark for LLM-based Relevance Judgments](https://llm4eval.github.io/LLMJudge-benchmark/).
+- Korikov et al., [Batched Self-Consistency Improves LLM Relevance Assessment and Ranking](https://aclanthology.org/2025.emnlp-main.1661/), EMNLP 2025.
+- Rahmani et al., [LLMJudge: A Benchmark for LLM-based Relevance Judgments](https://llm4eval.github.io/LLMJudge-benchmark/).
 
 **Compute profile:** Zero-/few-shot inference plus optional QLoRA of a 1.5B–3B judge; cache prompts and outputs.
 
@@ -424,7 +425,7 @@ Graph retrievers often expand too many nodes or produce plausible but invalid pa
 
 - Sun et al., [Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph](https://openreview.net/forum?id=nnVO1PvbTv), ICLR 2024.
 - Luo et al., [Reasoning on Graphs: Faithful and Interpretable Large Language Model Reasoning](https://openreview.net/forum?id=ZGNWW7xZ6Q), ICLR 2024.
-- Agrawal et al., [SymKGQA: Few-Shot Knowledge Graph Question Answering via Symbolic Program Generation](https://aclanthology.org/2024.acl-long.545/), ACL 2024.
+- Agarwal et al., [SymKGQA: Few-Shot Knowledge Graph Question Answering via Symbolic Program Generation](https://aclanthology.org/2024.acl-long.545/), ACL 2024.
 - He et al., [G-Retriever: Retrieval-Augmented Generation for Textual Graph Understanding and Question Answering](https://papers.nips.cc/paper_files/paper/2024/hash/efaf1c9726648c8ba363a5c927440529-Abstract-Conference.html), NeurIPS 2024.
 
 **Compute profile:** Keep the graph retriever and answer model mostly frozen; train a compact path scorer, verifier, or LoRA adapter.
@@ -451,9 +452,10 @@ Vision–language encoders often preserve topical similarity while ignoring nega
 ### Starter readings
 
 - Hsieh et al., [SugarCrepe: Fixing Hackable Benchmarks for Vision-Language Compositionality](https://proceedings.neurips.cc/paper_files/paper/2023/hash/63461de0b4cb760fc498e85b18a7fe81-Abstract-Datasets_and_Benchmarks.html), NeurIPS 2023.
-- An et al., [TripletCLIP: Improving Compositional Reasoning of CLIP via Synthetic Vision-Language Negatives](https://proceedings.neurips.cc/paper_files/paper/2024/hash/39781da4b5d05bc2908ce08e43bc6404-Abstract-Conference.html), NeurIPS 2024.
+- Patel et al., [TripletCLIP: Improving Compositional Reasoning of CLIP via Synthetic Vision-Language Negatives](https://proceedings.neurips.cc/paper_files/paper/2024/hash/39781da4b5d05bc2908ce08e43bc6404-Abstract-Conference.html), NeurIPS 2024.
 - Alhamoud et al., [Vision-Language Models Do Not Understand Negation](https://openaccess.thecvf.com/content/CVPR2025/html/Alhamoud_Vision-Language_Models_Do_Not_Understand_Negation_CVPR_2025_paper.html), CVPR 2025.
 - Prachi et al., [Answering Multimodal Exclusion Queries with Lightweight Sparse Disentangled Representations](https://dl.acm.org/doi/10.1145/3731120.3744617), ICTIR 2025.
+- Prachi et al., [Being Positive about Negative Queries: Exclusion Aware Multimodal Retrieval using Disentangled Representations](https://wacv.thecvf.com/virtual/2026/poster/362), WACV 2026.
 
 **Compute profile:** Freeze a CLIP/SigLIP backbone and train small adapters or projection layers using mined hard negatives.
 
