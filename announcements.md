@@ -17,3 +17,5 @@ description: A feed containing all of the class announcements.
 
 [`4 Sep 2026`] Mid-term Exam slot announced -- **September 17, 2026, 6:00 pm**
 
+[`4 Sep 2026`] Tentative list of projects is announced. Deadline to give top-3 preferences is **September 7, 2026**
+
