@@ -16,3 +16,4 @@ description: A feed containing all of the extra reading material.
 ## Recommended Reading Material
 1. Survey on Open-Vocabulary Modeling and Tokenization in NLP ([Mielke et al.](https://www.semanticscholar.org/reader/d617f51833860dc50d202af7f80be71304b2e994))
 2. [The Probabilistic Relevance Framework: BM25 and Beyond](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/foundations_bm25_review.pdf)
+3. [A study of Poisson query generation model for information retrieval](https://dl.acm.org/doi/10.1145/1277741.1277797)
