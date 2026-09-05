@@ -15,3 +15,5 @@ description: A feed containing all of the class announcements.
 
 [`24 Aug 2026`] Classes cancelled. 
 
+[`4 Sep 2026`] Mid-term Exam slot announced -- **September 17, 2026, 6:00 pm**
+
