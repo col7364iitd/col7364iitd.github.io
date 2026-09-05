@@ -20,7 +20,7 @@ description: The weekly event schedule.
 7. `24 Aug 2026` : *Classes cancelled*
 8. `27 Aug 2026` : No Class
 9. `31 Aug 2026` : [Probabilistic Retrieval](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-probabilistic-bm25.pdf)
-10. 
+10. `05 Sep 2026` : [Language Models for Retrieval](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-lm4retrieval.pdf)
 
 {% for schedule in site.schedules %}
 {{ schedule }}
