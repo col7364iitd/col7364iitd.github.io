@@ -19,3 +19,5 @@ description: A feed containing all of the class announcements.
 
 [`4 Sep 2026`] Tentative list of projects is announced. Deadline to give top-3 preferences is **September 8, 2026**
 
+[`9 Sep 2026`] Project allocations completed. They are announced on Piazza. 
+
