@@ -17,3 +17,7 @@ description: A feed containing all of the extra reading material.
 1. Survey on Open-Vocabulary Modeling and Tokenization in NLP ([Mielke et al.](https://www.semanticscholar.org/reader/d617f51833860dc50d202af7f80be71304b2e994))
 2. [The Probabilistic Relevance Framework: BM25 and Beyond](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/foundations_bm25_review.pdf)
 3. [A study of Poisson query generation model for information retrieval](https://dl.acm.org/doi/10.1145/1277741.1277797)
+4. [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781) (Aka the Word2Vec paper)
+5. [Neural Word Embedding as Implicit Matrix Factorization](https://papers.nips.cc/paper_files/paper/2014/file/b78666971ceae55a8e87efb7cbfd9ad4-Paper.pdf)
+6. [Dependency-Based Word Embeddings](https://aclanthology.org/P14-2050.pdf)
+7. [A Dual Embedding Space Model for Document Ranking](https://arxiv.org/abs/1602.01137) (Extended version of the WWW'16 paper)
