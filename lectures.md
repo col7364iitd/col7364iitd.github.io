@@ -22,6 +22,7 @@ description: The weekly event schedule.
 9. `31 Aug 2026` : [Probabilistic Retrieval](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-probabilistic-bm25.pdf)
 10. `05 Sep 2026` : [Language Models for Retrieval](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-lm4retrieval.pdf)
 11. `07 Sep 2026` : [Relevance Models in LM based Retrieval](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-rm3.pdf)
+11. `10 Sep 2026` : [Corpus Level Word Representations (Word2Vec) for IR](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-word2vec4ir.pdf)
 
 {% for schedule in site.schedules %}
 {{ schedule }}
