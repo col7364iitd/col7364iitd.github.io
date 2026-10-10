@@ -11,6 +11,8 @@ description: A feed containing all of the extra reading material.
 1. WordPiece and BPE tokenizer papers
 2. [SentencePiece](https://www.semanticscholar.org/paper/SentencePiece%3A-A-simple-and-language-independent-Kudo-Richardson/b5246fa284f86b544a7c31f050b3bd0defd053fd): A simple and language independent subword tokenizer and detokenizer for Neural Text Processing
 4. [A study of smoothing methods for language models applied to information retrieval](https://dl.acm.org/doi/10.1145/984321.984322)
+5. [C.J.C. Burges, From RankNet to LambdaRank to LambdaMART: An Overview. Microsoft Research Technical Report MSR-TR-2010-82, 2010](https://drive.google.com/file/d/0B6x5IP0EWft1V0txX2FXbmM0dWc/view?resourcekey=0-ODR5FOR3PjY5B0ZA6JKNYQ)
+6. [C.J.C. Burges, R. Ragno and Q.V. Le, Learning to Rank with Non-Smooth Cost Functions. NIPS 2006](https://drive.google.com/file/d/0B6x5IP0EWft1NlE5emR5ZC1GZlk/view?resourcekey=0-7jEPWdCxSgwC4x5xnQmcRQ)
    
 
 ## Recommended Reading Material
