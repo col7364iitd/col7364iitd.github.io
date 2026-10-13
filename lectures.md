@@ -27,6 +27,8 @@ description: The weekly event schedule.
 13. `24 Sep 2026` : [Learning to Rank - I](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-letor1.pdf)
 14. `26 Sep 2026` : [Dev Candidates list](candidates_dev.jsonl) - Assignment 2 Leaderboard begins
 15. `08 Oct 2026` : [Learning to Rank - II](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-lector2.pdf)
+16. `12 Oct 2026` : [Neural Models for Ranking](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-neural.pdf)
+
 {% for schedule in site.schedules %}
 {{ schedule }}
 {% endfor %}
