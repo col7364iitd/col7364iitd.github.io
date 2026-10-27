@@ -31,6 +31,7 @@ description: The weekly event schedule.
 17. `15 Oct 2026` : Assignment 3 Leaderboard begins (deadline -- `24 Oct 2026`)
 18. `19 Oct 2026` : [Ranking with Transformers - I](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-transformers-1.pdf)
 19. `22 Oct 2026` : [Dense Retrieval](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-transformers-2.pdf)
+20. `26 Oct 2026` : [Alternatives to Dense Retrieval](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-transformers-3.pdf)
 
 {% for schedule in site.schedules %}
 {{ schedule }}
