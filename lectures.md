@@ -34,6 +34,7 @@ description: The weekly event schedule.
 20. `26 Oct 2026` : [Alternatives to Dense Retrieval](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-transformers-3.pdf)
 21. `29 Oct 2026` : [Generative Retrieval - Closed Book](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-genretr-cb.pdf)
 22. `02 Nov 2026` : [Agentic Retrieval - I](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-agentic-1.pdf)
+23. `12 Nov 2026` : [Agentic Retrieval - II](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-agentic-2.pdf)
 
 {% for schedule in site.schedules %}
 {{ schedule }}
