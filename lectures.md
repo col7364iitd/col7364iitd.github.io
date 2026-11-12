@@ -25,7 +25,7 @@ description: The weekly event schedule.
 11. `10 Sep 2026` : [Corpus Level Word Representations (Word2Vec) for IR](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-word2vec4ir.pdf)
 12. `21 Sep 2026` : [Rank Fusion](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-rankfusion.pdf)
 13. `24 Sep 2026` : [Learning to Rank - I](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-letor1.pdf)
-14. `26 Sep 2026` : [Dev Candidates list](candidates_dev.jsonl) - Assignment 2 Leaderboard begins
+14. `26 Sep 2026` : Assignment 2 Leaderboard begins -- [Dev Candidates list](candidates_dev.jsonl)
 15. `08 Oct 2026` : [Learning to Rank - II](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-lector2.pdf)
 16. `12 Oct 2026` : [Neural Models for Ranking](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-neural.pdf)
 17. `15 Oct 2026` : Assignment 3 Leaderboard begins (deadline -- `24 Oct 2026`)
@@ -34,7 +34,8 @@ description: The weekly event schedule.
 20. `26 Oct 2026` : [Alternatives to Dense Retrieval](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-transformers-3.pdf)
 21. `29 Oct 2026` : [Generative Retrieval - Closed Book](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-genretr-cb.pdf)
 22. `02 Nov 2026` : [Agentic Retrieval - I](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-agentic-1.pdf)
-23. `12 Nov 2026` : [Agentic Retrieval - II](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-agentic-2.pdf)
+23. `05 Nov 2026` : Assignment 4 Leaderboard begins (deadline -- `17 Oct 2026`)
+24. `12 Nov 2026` : [Agentic Retrieval - II](http://privateweb.iitd.ac.in/~srikanta/2026-col7364/2026-agentic-2.pdf)
 
 {% for schedule in site.schedules %}
 {{ schedule }}
